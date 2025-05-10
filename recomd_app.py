@@ -106,7 +106,11 @@ def generate_recommendations(row):
     st.markdown("<div class='section-title'>📅 Opportunity Timing</div>", unsafe_allow_html=True)
     if opp_timing == "Late":
         st.markdown("<div class='rec-card'>📆 Align opportunity dates with academic calendars.</div>", unsafe_allow_html=True)
-
+    elif opp_timing == "On-Time":
+        st.markdown("<div class='rec-card'>🕓 Opportunity timing is optimal. Maintain current scheduling.</div>", unsafe_allow_html=True)
+    else:  # For "Early"
+        st.markdown("<div class='rec-card'>⏳ Well done! Consider applying even earlier next time for better preparation.</div>", unsafe_allow_html=True)
+      
     # Engagement Duration
     st.markdown("<div class='section-title'>⏳ Engagement Duration</div>", unsafe_allow_html=True)
     if duration == "Low":
